@@ -1,0 +1,26 @@
+{{.value}}
+
+{{foreach .el in .list}}
+ - {{.el}}
+{{end}}
+
+{{if .condition}}
+ * condition I
+{{else}}
+ {{if .condition2}}
+ * condition II
+ {{else}}
+ * else
+ {{end}}
+{{end}}
+
+{{switch .variable}}
+	{{case "value"}}
+	  first case
+	{{case "vals"}}
+	  second case
+	{{default}}
+	  default case
+{{end}}
+
+{{.dict.name}}
